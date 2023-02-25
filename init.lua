@@ -1,0 +1,8 @@
+require('plugins')
+require('keymaps')
+require('colorscheme')
+require('options')
+require('plugins.nvim-tree')
+require('plugins.lualine')
+require('plugins.mason')
+require('plugins.lspconfig')
