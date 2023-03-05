@@ -5,6 +5,8 @@ local map = require("utils").map
 map("i", "jk", "<Esc>")
 map("n", "jk", "i")
 
+map("n", "<leader>r", ":luafile %<CR>")
+
 map("n", "<leader>q", ":q!<CR>")
 map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>s", ":wq<CR>")
@@ -28,10 +30,11 @@ map("n", "<leader>ps", ":PackerSync<CR>")
 map("n", "<leader>pi", ":PackerInstall<CR>")
 -- nvim tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>")
+map("n", "<leader>ef", ":NvimTreeFocus<CR>")
+map("n", "<leader>ec", ":NvimTreeCollapse<CR>")
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
 map("n", "<leader>fs", ":Telescope live_grep<CR>")
 map("n", "<leader>fc", ":Telescope grep_string<CR>")
 map("n", "<leader>fb", ":Telescope buffer<CR>")
 map("n", "<leader>fh", ":Telescope help_tags<CR>")
-

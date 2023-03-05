@@ -6,3 +6,5 @@ require('plugins.nvim-tree')
 require('plugins.lualine')
 require('plugins.mason')
 require('plugins.lspconfig')
+require('plugins.nvim-cmp')
+
