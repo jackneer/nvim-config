@@ -7,4 +7,6 @@ require('plugins.lualine')
 require('plugins.mason')
 require('plugins.lspconfig')
 require('plugins.nvim-cmp')
+require('plugins.toggleterm')
+require('plugins.treesitter')
 
