@@ -27,19 +27,36 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig.lua_ls.setup({
+lspconfig.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' },
-      },
-    },
-  },
-})
+}
 
-lspconfig.tsserver.setup({
+lspconfig.tsserver.setup {
   on_attach = on_attach,
-  capabilities = capabilities
-})
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+  cmd = { 'typescript-language-server', '--stdio' },
+  capabilities = capabilities,
+}
+
+lspconfig.lua_ls.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    --enable_format_on_save(client, bufnr)
+  end,
+  capabilities = capabilities,
+}
+
+lspconfig.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- local lsp_defaults = lspconfig.util.default_config
+-- lsp_defaults.capabilities = vim.tbl_deep_extend(
+--   'force',
+--  lsp_defaults.capabilities,
+--  require('cmp_nvim_lsp').default_capabilities()
+--)
+
+

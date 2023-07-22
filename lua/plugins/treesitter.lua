@@ -5,7 +5,7 @@ if not status then
 end
 
 treesitter.setup {
-  ensure_installed = { 'c', 'lua', 'vim', 'help', 'query', 'tsx', 'json', 'yaml', 'css', 'html' },
+  ensure_installed = { 'c', 'lua', 'vim', 'query', 'tsx', 'json', 'yaml', 'css', 'html' },
   sync_install = false,
   auto_install = true,
   ignore_install = {},
